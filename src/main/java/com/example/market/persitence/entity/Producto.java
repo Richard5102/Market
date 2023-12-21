@@ -14,7 +14,7 @@ public class Producto {
     private String nombre;
 
     @Column (name = "id_category")
-    private Integer idCategory;
+    private Integer idCategoria;
 
     @Column (name = "codigo_barras")
     private String codigoBarras;
@@ -31,6 +31,13 @@ public class Producto {
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
 
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
     public Integer getIdProducto() {
         return idProducto;
@@ -48,12 +55,12 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public Integer getIdCategory() {
-        return idCategory;
+    public Integer getIdCategoria() {
+        return idCategoria;
     }
 
-    public void setIdCategory(Integer idCategory) {
-        this.idCategory = idCategory;
+    public void setIdCategoria(Integer idCategoria) {
+        this.idCategoria = idCategoria;
     }
 
     public String getCodigoBarras() {

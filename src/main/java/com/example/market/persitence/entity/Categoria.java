@@ -12,7 +12,7 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer idCategoria;
 
-    private String description;
+    private String descripcion;
     private boolean estado;
 
     @OneToMany(mappedBy = "categoria")
@@ -26,12 +26,20 @@ public class Categoria {
         this.idCategoria = idCategoria;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
     }
 
     public boolean isEstado() {

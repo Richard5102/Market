@@ -15,14 +15,13 @@ public interface ProductMapper {
 
     @Mappings({
             @Mapping(source = "idProducto", target = "productId"),
-            @Mapping(source = "nomnre", target = "name"),
+            @Mapping(source = "nombre", target = "name"),
             @Mapping(source = "idCategoria", target = "categoryId"),
             @Mapping(source = "precioVenta", target = "price"),
             @Mapping(source = "cantidadStock", target = "stock"),
             @Mapping(source = "estado", target = "active"),
             @Mapping(source = "categoria", target = "category"),
     })
-    Product getProduct(Product producto);
     List<Product> toProducts(List<Producto> products);
     Product toProduct(Producto producto);
 
