@@ -1,7 +1,5 @@
 package com.example.market.domain;
-
 public class Category {
-
     private int categoryId;
     private String category;
     private boolean active;
